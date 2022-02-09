@@ -10,7 +10,7 @@ provider "aws" {
 }
 
 provider "google" {
-  credentials = var.GOOGLE_CREDENTIALS
+  credentials = TF_VAR_GOOGLE_CREDENTIALS
 
   project = "265583671093"
   region  = "us-central1"
