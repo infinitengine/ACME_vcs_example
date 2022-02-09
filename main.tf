@@ -13,8 +13,8 @@ provider "google" {
 # Specify StackPath Provider and your access details
 provider "stackpath" {
   stack_id      = var.stackpath_stack_id
-  client_id     = var.TF_VAR_stackpath_client_id
-  client_secret = var.TF_VAR_stackpath_client_secret
+  client_id     = var.stackpath_client_id
+  client_secret = var.stackpath_client_secret
 }
 
 
