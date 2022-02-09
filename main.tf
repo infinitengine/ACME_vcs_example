@@ -1,8 +1,18 @@
 # declare your service account variable here or within a variables.tf file
 variable "GOOGLE_CREDENTIALS" {}
-variable "stackpath_stack_id" {}
-variable "stackpath_client_id" {}
-variable "stackpath_client_secret" {}
+variable "stackpath_stack_id" {
+	type = string
+	default = ""
+}
+variable "stackpath_client_id" {
+        type = string
+        default = ""
+}
+variable "stackpath_client_secret" {
+        type = string
+        default = ""
+}
+
 
 # Specify StackPath Provider and your access details
 provider "stackpath" {
