@@ -10,7 +10,7 @@ output "instance_arn" {
 # location, and status
 output "my-compute-workload-instances" {
   value = {
-    for instance in stackpath_compute_workload.my-compute-workload.instances:
+    for instance in stackpath_compute_workload.erik.instances:
     instance.name => {
       ip_address = instance.external_ip_address
       phase      = instance.phase
