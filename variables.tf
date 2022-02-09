@@ -12,3 +12,19 @@ variable "instance_name" {
   description = "EC2 instance name"
   default     = "Provisioned by Terraform"
 }
+
+variable "GOOGLE_CREDENTIALS" {
+	type = string
+	default = ""
+}
+variable "stackpath_stack_id" {
+	type = string
+}
+variable "stackpath_client_id" {
+        type = string
+        default = ""
+}
+variable "stackpath_client_secret" {
+        type = string
+        default = ""
+}
