@@ -10,6 +10,11 @@ terraform {
       version = "3.0.0"
     }
   }
+  
+  stackpath = {
+  source = "stackpath/stackpath"
+  version = "1.4.0"
+ }
 
   required_version = ">= 0.14.0"
 }
