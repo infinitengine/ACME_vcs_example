@@ -9,6 +9,14 @@ provider "aws" {
   region = var.region
 }
 
+provider "google" {
+  credentials = var.GOOGLE_CREDENTIALS
+
+  project = "265583671093"
+  region  = "us-central1"
+  zone    = "us-central1-c"
+}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -45,7 +53,7 @@ resource "stackpath_compute_workload" "erik" {
     "role"        = "web-server"
     "environment" = "production"
   }
-
+	
   # Define the network interface.
   network_interface {
     network = "default"
@@ -162,6 +170,29 @@ EOT
       requests = {
         storage = "100Gi"
       }
+    }
+  }
+}
+
+#Google Cloud
+resource "google_compute_network" "vpc_network" {
+  name = "terraform-network"
+}
+
+resource "google_compute_instance" "vm_instance" {
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    # A default network is created for all GCP projects
+    network = "default"
+    access_config {
     }
   }
 }
