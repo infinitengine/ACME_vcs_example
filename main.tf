@@ -12,9 +12,9 @@ provider "google" {
 
 # Specify StackPath Provider and your access details
 provider "stackpath" {
-  STACKPATH_STACK_ID      = var.STACKPATH_STACK_ID
-  STACKPATH_CLIENT_ID     = var.STACKPATH_CLIENT_ID
-  STACKPATH_CLIENT_SECRET = var.STACKPATH_CLIENT_SECRET
+  stack_id      = var.STACKPATH_STACK_ID
+  client_id     = var.STACKPATH_CLIENT_ID
+  client_secret = var.STACKPATH_CLIENT_SECRET
 }
 
 
