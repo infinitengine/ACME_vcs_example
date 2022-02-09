@@ -9,11 +9,11 @@ variable "stackpath_stack_id" {
 }
 variable "stackpath_client_id" {
         type = string
-	default = 
+	default = ""
 }
 variable "stackpath_client_secret" {
         type = string
-	default = 
+	default = ""
 }
 
 
