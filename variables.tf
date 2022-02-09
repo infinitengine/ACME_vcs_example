@@ -19,6 +19,7 @@ variable "GOOGLE_CREDENTIALS" {
 }
 variable "stackpath_stack_id" {
 	type = string
+        default = ""
 }
 variable "stackpath_client_id" {
         type = string
