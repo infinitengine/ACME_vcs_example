@@ -1,7 +1,7 @@
 # declare your service account variable here or within a variables.tf file
 variable "GOOGLE_CREDENTIALS" {
 	type = string
-	default = ""
+	default = "my-default-stack-c43561"
 }
 variable "stackpath_stack_id" {
 	type = string
