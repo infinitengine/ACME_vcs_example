@@ -59,7 +59,51 @@ resource "stackpath_compute_workload" "erik" {
   network_interface {
     network = "default"
   }
+  container {
+    # Name that should be given to the container
+    name = "app"
 
+    # Nginx image to use for the container
+    image = "nginx:latest"
+
+    # Override the command that's used to execute the container. If this option 
+    # is not provided the default entrypoint and command defined by the docker 
+    # image will be used.
+    # command = []
+    resources {
+      requests = {
+        "cpu"    = "1"
+        "memory" = "2Gi"
+      }
+    }
+
+    env {
+      key   = "VARIABLE_NAME"
+      value = "VALUE"
+    }
+  }
+
+  target {
+    name         = "us"
+    min_replicas = 1
+    max_replicas = 2
+    scale_settings {
+      metrics {
+        metric = "cpu"
+        # Scale up when CPU averages 50%.
+        average_utilization = 50
+      }
+    }
+    # Deploy these 1 to 2 instances in Dallas, TX, USA and Amsterdam, NL.
+    deployment_scope = "cityCode"
+    selector {
+      key      = "cityCode"
+      operator = "in"
+      values   = [
+        "DFW", "AMS"
+      ]
+    }
+  }
   # Define an Ubuntu virtual machine
   virtual_machine {
     # Name that should be given to the VM
