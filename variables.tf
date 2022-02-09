@@ -21,11 +21,11 @@ variable "stackpath_stack_id" {
 	type = string
         default = ""
 }
-variable "STACKPATH_CLIENT_ID" {
+variable "TF_VAR_stackpath_client_id" {
         type = string
         default = ""
 }
-variable "STACKPATH_CLIENT_SECRET" {
+variable "TF_VAR_stackpath_client_secret" {
         type = string
         default = ""
 }
