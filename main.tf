@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    stackpath = {
-      source = "stackpath/stackpath"
-      version = "1.4.0"
-    }
-  }
-}
 # Specify StackPath Provider and your access details
 provider "stackpath" {
   stack_id      = var.stackpath_stack_id
