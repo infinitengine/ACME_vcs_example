@@ -17,15 +17,15 @@ variable "GOOGLE_CREDENTIALS" {
 	type = string
 	default = ""
 }
-variable "stackpath_stack_id" {
+variable "STACKPATH_STACK_ID" {
 	type = string
         default = ""
 }
-variable "stackpath_client_id" {
+variable "STACKPATH_CLIENT_ID" {
         type = string
         default = ""
 }
-variable "stackpath_client_secret" {
+variable "STACKPATH_CLIENT_SECRET" {
         type = string
         default = ""
 }
