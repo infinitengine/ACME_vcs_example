@@ -1,10 +1,3 @@
-# Specify StackPath Provider and your access details
-provider "stackpath" {
-  stack_id      = var.stackpath_stack_id
-  client_id     = var.stackpath_client_id
-  client_secret = var.stackpath_client_secret
-}
-
 provider "aws" {
   region = var.region
 }
@@ -16,6 +9,14 @@ provider "google" {
   region  = "us-central1"
   zone    = "us-central1-c"
 }
+
+# Specify StackPath Provider and your access details
+provider "stackpath" {
+  stack_id      = var.stackpath_stack_id
+  client_id     = var.stackpath_client_id
+  client_secret = var.stackpath_client_secret
+}
+
 
 data "aws_ami" "ubuntu" {
   most_recent = true
