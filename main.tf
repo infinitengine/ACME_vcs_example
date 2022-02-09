@@ -1,6 +1,6 @@
 # Specify StackPath Provider and your access details
 provider "stackpath" {
-  stack_id      = var.stackpath_stack_id
+  stack_id      = var.TF_VAR_stackpath_stack_id
   client_id     = var.stackpath_client_id
   client_secret = var.stackpath_client_secret
 }
