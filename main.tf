@@ -1,3 +1,9 @@
+# declare your service account variable here or within a variables.tf file
+variable "GOOGLE_CREDENTIALS" {}
+variable "stackpath_stack_id" {}
+variable "stackpath_client_id" {}
+variable "stackpath_client_secret" {}
+
 # Specify StackPath Provider and your access details
 provider "stackpath" {
   stack_id      = var.stackpath_stack_id
