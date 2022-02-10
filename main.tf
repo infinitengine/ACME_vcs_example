@@ -46,8 +46,8 @@ resource "aws_instance" "ubuntu" {
 
 # Create a new Ubuntu virtual machine workload
 resource "stackpath_compute_workload" "erik" {
-  name = "Erik Workload"
-  slug = "erik"
+  name = "ACME Test Workload"
+  slug = "acme-test-workload"
 
   # Define multiple labels on the workload VM.
   labels = {
